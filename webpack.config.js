@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const IgnoreEmitPlugin = require('ignore-emit-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -18,15 +19,20 @@ const getEntries = (pattern, extension) => glob
         return {...entries, [entryName]: filename};
     }, {});
 
+const PATHS = {
+    src_js: path.resolve(__dirname, 'src/js'),
+    src_css: path.resolve(__dirname, 'src/css'),
+};
+
 module.exports = {
     mode: ENV.NODE_ENV,
     watch: isWatchMode,
     entry: {
-        ...getEntries(`./src/js/selectPhoneNumTemp.js`, 'js'),
-        ...getEntries(`./src/css/*.scss`, 'css'),
+        ...getEntries(`${PATHS.src_js}/script.js`, 'js'),
+        ...getEntries(`${PATHS.src_css}/*.scss`, 'css')
     },
     output: {
-        path: path.resolve(__dirname, './public')
+        path: path.resolve(__dirname, 'public')
     },
     devtool: ENV.NODE_ENV === 'development' ? 'source-map' : false,
     module: {
@@ -39,20 +45,21 @@ module.exports = {
                 }
             },
             {
-                test: /\.(s*)css$/,
+                test: /\.(sa|sc|c)ss$/,
                 exclude: /node_modules/,
-                include: path.resolve(__dirname, 'src/css'),
+                include: PATHS.src_css,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
                     'sass-loader',
-                ]
+                ],
             },
         ],
     },
     plugins: [
-        new MiniCssExtractPlugin(),
         new CleanWebpackPlugin(),
+        new IgnoreEmitPlugin(/(css)\/.*\.(js)/),
+        new MiniCssExtractPlugin(),
     ]
 }

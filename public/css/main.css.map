@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/css/main.scss"],"names":[],"mappings":"AAEA;EACE,UAHW;AAEb,C","file":"css/main.css","sourcesContent":["$body-color: red;\n\nbody {\n  color: $body-color;\n}"],"sourceRoot":""}
