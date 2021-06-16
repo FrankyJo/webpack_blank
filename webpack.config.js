@@ -3,6 +3,8 @@ const path = require('path')
 const IgnoreEmitPlugin = require('ignore-emit-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const glob = require('glob');
 
@@ -22,6 +24,7 @@ const getEntries = (pattern, extension) => glob
 const PATHS = {
     src_js: path.resolve(__dirname, 'src/js'),
     src_css: path.resolve(__dirname, 'src/css'),
+    src_img: path.resolve(__dirname, 'src/img')
 };
 
 module.exports = {
@@ -61,5 +64,12 @@ module.exports = {
         new CleanWebpackPlugin(),
         new IgnoreEmitPlugin(/(css)\/.*\.(js)/),
         new MiniCssExtractPlugin(),
+        // Copy the images folder and optimize all the images
+        new CopyWebpackPlugin({
+            patterns: [
+                {from: `${PATHS.src_img}`, to: `img`}
+            ]
+        }),
+        new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
     ]
 }
