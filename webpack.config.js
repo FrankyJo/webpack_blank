@@ -58,6 +58,21 @@ module.exports = {
                     'sass-loader',
                 ],
             },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                            context: path.resolve(__dirname, 'src/'),
+                            publicPath: '../',
+                            useRelativePaths: true,
+                        },
+                    },
+                ],
+
+            }
         ],
     },
     plugins: [
