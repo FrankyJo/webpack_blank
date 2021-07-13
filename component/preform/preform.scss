@@ -1,0 +1,40 @@
+.preform {
+  &__form {
+    width: 540px;
+
+    .select-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-size: 18px;
+      font-weight: bold;
+      margin-left: 30px;
+      margin-bottom: 5px;
+      color: $white;
+    }
+
+    select {
+      color: $black;
+      font-size: 40px;
+      font-weight: bold;
+      padding: 15px 30px;
+      margin-bottom: 15px;
+      background: $white;
+    }
+
+    .get-btn {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      width: 100%;
+    }
+
+    .rates {
+      color: $white;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+  }
+}

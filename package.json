@@ -8,6 +8,7 @@
     "@babel/core": "^7.14.0",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/preset-env": "^7.14.1",
+    "@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker#v8.0.1",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "*",
     "copy-webpack-plugin": "^9.0.0",
@@ -15,6 +16,8 @@
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^1.6.0",
     "node-sass": "^6.0.0",
+    "postcss": "^8.3.5",
+    "postcss-focus": "^5.0.1",
     "sass": "^1.35.0",
     "sass-loader": "^11.1.1",
     "style-loader": "^2.0.0",
@@ -23,9 +26,13 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "autoprefixer": "^10.3.1",
     "css-loader": "^5.2.4",
+    "group-css-media-queries": "^1.4.1",
+    "group-css-media-queries-loader": "^3.0.2",
     "ignore-emit-webpack-plugin": "^2.0.6",
     "imagemin-webpack-plugin": "^2.4.2",
-    "postcss-loader": "^5.2.0"
+    "postcss-loader": "^5.2.0",
+    "postcss-preset-env": "^6.7.0"
   }
 }

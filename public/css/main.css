@@ -3,4 +3,26 @@ body {
   background-image: url(../img/img.png);
 }
 
+div {
+  color: red;
+}
+
+@media (max-width: 1200px) {
+  body {
+    color: white;
+  }
+  div {
+    color: green;
+  }
+}
+
+@media (max-width: 100px) {
+  body {
+    color: yellow;
+  }
+  div {
+    color: white;
+  }
+}
+
 /*# sourceMappingURL=main.css.map*/
