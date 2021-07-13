@@ -6,6 +6,7 @@ need fix problem with runtime ( js crash if use async await ) https://stackoverf
 <ul>
   <li><span>ОБЯЗАТЕЛЬНО!!! На проде должен быть подключен скрипт <a href="https://cdn101.t.uk/resource/global/js/params_store.js">param-store.js </a>  </span></li>
   <li>Для попапа opt-out обязательно нужно подключить файл ajax.php ( он глобальный )</li>
+  <li>Вместо названия сайта по текста ( напрмер: site.co.ul) должно быть переменна - {site_text}, которая добавляется в Feed Variables</li>
 </ul>
 
 <h2>Какие могут быть ошибки при установке шаблона</h2>
