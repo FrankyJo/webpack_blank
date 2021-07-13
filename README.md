@@ -4,7 +4,7 @@ need fix problem with runtime ( js crash if use async await ) https://stackoverf
 
 <h2> Моменты на которые стоит обратить внимание при выливке </h2>
 <ul>
-  <li><span style="color:red;">ОБЯЗАТЕЛЬНО!!! На проде должен быть подключен обязательно скрипт <a href="https://cdn101.t.uk/resource/global/js/params_store.js">param-store.js </a>  </span></li>
+  <li><span>ОБЯЗАТЕЛЬНО!!! На проде должен быть подключен скрипт <a href="https://cdn101.t.uk/resource/global/js/params_store.js">param-store.js </a>  </span></li>
   <li>Для попапа opt-out обязательно нужно подключить файл ajax.php ( он глобальный )</li>
 </ul>
 
