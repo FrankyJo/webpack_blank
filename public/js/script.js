@@ -124,6 +124,20 @@ $(".close-modal, .overlay, .back-btn").click(function () {
   ;
   document.cookie = "omPopover=true";
 }); // ------------------------------------------------------
+
+window.addEventListener('DOMContentLoaded', function () {
+  // check resize header
+  var header = document.querySelector('.header');
+  var content = document.querySelector('.padd-cont');
+
+  function changeHeight() {
+    var heightHeader = header.getBoundingClientRect().height;
+    content.style.paddingTop = heightHeader + 'px';
+  }
+
+  window.addEventListener("load", changeHeight);
+  window.addEventListener("resize", changeHeight);
+});
 /******/ })()
 ;
 //# sourceMappingURL=script.js.map

@@ -55,8 +55,8 @@
             <p>1. Not all lenders will be able to provide amounts up to £5000. 2. Not all lenders pay out the same
                 day.</p>
             <div class="partners">
-                <a target="_blank" href="https://www.ccta.co.uk/"><img src="./img/logo_ccta.png" alt=""></a>
-                <a target="_blank" href="https://cfa-uk.co.uk/"><img src="./img/logo_cfa.png" alt=""></a>
+                <a target="_blank" href="https://www.ccta.co.uk/"><img src="./public/img/logo_ccta.png" alt=""></a>
+                <a target="_blank" href="https://cfa-uk.co.uk/"><img src="./public/img/logo_cfa.png" alt=""></a>
             </div>
             <p>Please be advised that this website is not part of Facebook, Instagram or Facebook Inc. Additionally,
                 this site is not endorsed by Facebook or Instagram in any way. Facebook® is a registered trademark of
@@ -75,9 +75,6 @@
 <div class="dont-leave-modal">
     <div class="overlay" style="display: block;"></div>
     <div class="window">
-        <div class="icon">
-            <img src="public/img/dont-leave.png" alt="">
-        </div>
         <h2>Don’t leave yet!</h2>
         <p>Get up to £5,000 as soon as the next business day!</p>
         <form action="form.php" class="preform">
@@ -219,7 +216,7 @@
     </script>
 <?php } ?>
 
-<?php include('opt-out-popup.php'); ?>
+<?php include 'opt-out-popup.php'; ?>
 
 </body>
 
