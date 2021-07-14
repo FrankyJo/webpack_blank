@@ -4,7 +4,7 @@
 <?php include 'navigate.php'; ?>
 <!-- NOT COPY -->
 
-<div class="content">
+<div class="content padd-cont">
 
 	<section class="preform-section">
         <div class="wrapper">

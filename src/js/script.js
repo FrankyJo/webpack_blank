@@ -45,11 +45,11 @@ $(window).on('load resize', function () {
 // Если на сайте есть SVG анимации:
 // animations
 const currentPageAnimations = [
-    {elementId: 'anim-1', path: 'anim-man.json'}, // в обьекте указываем - 1) id по которому будем вызывать анимацию 2) путь к json файлу анимации
-    {elementId: 'anim-2', path: 'anim-woman.json'},
+    { elementId: 'anim-1', path: 'anim-man.json' }, // в обьекте указываем - 1) id по которому будем вызывать анимацию 2) путь к json файлу анимации
+    { elementId: 'anim-2', path: 'anim-woman.json' },
 ];
 // Функции для инициализации и вызова анимаций (менять ничего не нужно):
-currentPageAnimations.forEach(function(item) {
+currentPageAnimations.forEach(function (item) {
     initLottie({
         element: document.getElementById(item.elementId),
         path: item.path
@@ -59,8 +59,8 @@ function initLottie(options) {
     return lottie.loadAnimation({
         container: options.element,
         path: options.path,
-        renderer: 'svg', 
-        loop: true, 
+        renderer: 'svg',
+        loop: true,
         autoplay: true
     })
 }
@@ -115,3 +115,16 @@ $(".close-modal, .overlay, .back-btn").click(function () {
     document.cookie = "omPopover=true";
 });
 // ------------------------------------------------------
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    // check resize header
+    const header = document.querySelector('.header');
+    const content = document.querySelector('.padd-cont');
+    function changeHeight() {
+        const heightHeader = header.getBoundingClientRect().height;
+        content.style.paddingTop = heightHeader + 'px'
+    }
+    window.addEventListener("load", changeHeight);
+    window.addEventListener("resize", changeHeight);
+});

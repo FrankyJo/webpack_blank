@@ -15,7 +15,7 @@
 				<!-- desktop menu -->
 				<nav class="menu">
 					<ul>
-						<li><a href="./form.php" class="get-btn hidden-desktop">Get Started</a></li>
+						<li class="hidden-desktop"><a href="./form.php" class="get-btn">Get Started</a></li>
 						<li><a <?php if(basename($_SERVER['SCRIPT_NAME']) == 'index.php') { echo 'class="active" '; } ?> href="/">Home</a></li>
 						<li><a <?php if(basename($_SERVER['SCRIPT_NAME']) == 'how-it-works.php') { echo 'class="active" '; } ?> href="./how-it-works.php">How it works</a></li>
 						<li><a <?php if(basename($_SERVER['SCRIPT_NAME']) == 'faq.php') { echo 'class="active" '; } ?> href="./faq.php">Help Centre</a></li>
@@ -25,7 +25,7 @@
 				</nav>
 
 				<!-- humburger button -->
-				<div class="hum hidden-desktop">
+				<div class="hum">
 					<span></span>
 					<span></span>
 					<span></span>
