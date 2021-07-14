@@ -298,6 +298,10 @@
     </script>
 <?php } ?>
 
+<!-- Delete -->
+<script src="dev_helper/var-helper.js"></script>
+<!-- / -->
+
 </body>
 
 </html>
