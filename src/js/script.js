@@ -65,3 +65,53 @@ function initLottie(options) {
     })
 }
 // ------------------------------------------------------
+
+
+// open modal
+function omSetAnimateConfigOpen() {
+    $("body").css("overflow", "hidden");
+    $('.overlay').show();
+    $('.dont-leave-modal').addClass('flex-add');
+}
+
+function omSetAnimateConfigClose() {
+    $('.overlay').hide();
+    $('.dont-leave-modal ').slideUp();
+    $("body").css("overflow", "auto");
+}
+
+var mouseX = 0;
+var mouseY = 0;
+var popupCounter = 0;
+
+document.addEventListener("mousemove", function (e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+$(document).mouseleave(function () {
+    if (document.cookie.indexOf('omPopover') === -1) {
+        if (mouseY < 100 && window.innerWidth > 750) {
+            if (popupCounter < 1) {
+                if (typeof omSetAnimateConfigOpen === 'function') {
+                    omSetAnimateConfigOpen()
+                } else {
+                    console.warn('Missing function with settings')
+                }
+                ;
+            }
+            popupCounter++;
+        }
+    }
+});
+
+$(".close-modal, .overlay, .back-btn").click(function () {
+    if (typeof omSetAnimateConfigClose === 'function') {
+        omSetAnimateConfigClose()
+    } else {
+        console.warn('Missing function with settings')
+    }
+    ;
+    document.cookie = "omPopover=true";
+});
+// ------------------------------------------------------
