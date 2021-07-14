@@ -5,7 +5,7 @@
 		<div class="top-info">
 			<div class="wrapper">
 				<div class="col-left"><span>WARNING:</span> Late repayment can cause you serious money problems. For help, go to <a href="https://www.moneyadviceservice.org.uk" target="_blank">moneyadviceservice.org.uk</a></div>
-				<div class="col-right">{site_name} is a broker, not a lender, and does not make credit decisions. We may receive a commission from the lender.</div>
+				<div class="col-right">{site_text} is a broker, not a lender, and does not make credit decisions. We may receive a commission from the lender.</div>
 			</div>
 		</div>
 		<div class="top-nav">
