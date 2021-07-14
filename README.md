@@ -13,3 +13,9 @@ need fix problem with runtime ( js crash if use async await ) https://stackoverf
 <h3>This version of npm is compatible with lockfileVersion@1, but package-lock.json was generated for lockfileVersion@0. I'll try to do my best with it!</h3>
 <p>if  you have problem with <code>npm install</code> and error <code>This version of npm is compatible with lockfileVersion@1, but package-lock.json was generated for lockfileVersion@0. I'll try to do my best with it!</code> use this command <code>sudo rm -rf node_modules package-lock.json && npm install</code>
 <p>
+<h2>Создатели</h2>
+<ul>
+  <li><a href="https://github.com/FrankyJo">Denis Popov</a></li>
+  <li><a href="https://github.com/DmytroArtemov">Dmytro Artemov</a></li>
+</ul>
+
