@@ -1,0 +1,132 @@
+html,
+body {
+  font-size: 16px;
+  width: 100%;
+}
+
+body {
+  border: none;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  display: block;
+  color: #000;
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  text-transform: none;
+}
+
+.active {
+  position: relative;
+}
+.active:after {
+  content: "";
+  display: block;
+  width: 100% !important;
+  height: 1px;
+  background: #3A318A;
+  position: relative;
+  top: 10px;
+  transition: 0.4s;
+  margin: 0 auto;
+}
+
+strong {
+  font-weight: 800;
+}
+
+p {
+  font-size: 16px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  color: #000;
+  line-height: 19px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.4s;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-family: "Barlow";
+  font-size: 16px;
+  line-height: 19px;
+}
+
+img {
+  max-width: 100%;
+  border: none;
+}
+
+button,
+select,
+input,
+textarea {
+  font-family: "Barlow";
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 1210px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  position: relative;
+}
+
+.link {
+  color: #3A318A;
+  text-decoration: underline;
+}
+.link:hover {
+  color: #FF7966;
+}
+
+.logo {
+  width: 140px;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+@media screen and (min-width: 2000px) {
+  body {
+    max-width: 2000px;
+    width: 2000px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    padding: 0 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+/*# sourceMappingURL=typography.css.map*/

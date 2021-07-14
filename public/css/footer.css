@@ -1,0 +1,85 @@
+/* Footer */
+/* Navigation */
+footer {
+  padding: 0 0 50px;
+  /* Material */
+}
+footer .bot-nav {
+  background: #3A318A;
+}
+footer .bot-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+footer .bot-nav ul li a {
+  color: #fff;
+}
+footer .bot-nav ul li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: #FF7966;
+  position: relative;
+  top: 10px;
+  transition: 0.4s;
+}
+footer .bot-nav ul li a:hover:after {
+  width: 100%;
+}
+footer .material {
+  text-align: center;
+  padding: 45px 0 0;
+}
+footer .material p {
+  margin: 0 0 25px;
+}
+footer .material .partners {
+  margin: 45px 0;
+}
+footer .material .partners a {
+  margin: 0 15px;
+}
+footer .material .copyright {
+  border-top: 1px solid #C4C4C4;
+  padding: 15px 0;
+  margin: 45px 0 0;
+}
+@media screen and (max-width: 1200px) {
+  footer .bot-nav ul {
+    justify-content: center;
+    flex-flow: wrap;
+    padding: 30px 0 10px;
+  }
+  footer .bot-nav ul li {
+    margin: 0 15px 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  footer .bot-nav ul {
+    display: block;
+    text-align: center;
+  }
+  footer .bot-nav ul li a {
+    font-size: 18px;
+  }
+  footer .bot-nav ul li a:after {
+    top: 5px;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer .material .partners {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  footer .material .partners a {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map*/
