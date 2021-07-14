@@ -1,0 +1,76 @@
+/* ===============================================
+==================== FAQ PAGE ====================
+================================================== */
+
+/* accordeon */
+
+.accordeon {
+  margin: 100px 0 0;
+  .ac-head {
+    position: relative;
+    cursor: pointer;
+    padding: 20px 0 20px 95px;
+    transition: 0.4s;
+    background: #3A318A;
+    border-bottom: 1px solid #fff;
+    @media screen and (max-width: 950px) {
+      padding: 20px 20px 20px 75px;
+    }
+    &.in {
+      background: #46CFBB;
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
+    &:hover {
+      background: #FF7966;
+    }
+    h4 {
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 400;
+      color: #fff;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 38px;
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      @media screen and (max-width: 950px) {
+        left: 28px;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 12px);
+      left: 49px;
+      display: inline-block;
+      width: 2px;
+      height: 24px;
+      background: #fff;
+      transition: 0.4s;
+      @media screen and (max-width: 950px) {
+        left: 39px;
+      }
+    }
+  }
+  .ac-body {
+    display: none;
+    padding: 45px 10px 45px 95px;
+    @media screen and (max-width: 950px) {
+      padding: 35px 10px 35px 75px;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 30px 20px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 33px;
+    }
+  }
+}

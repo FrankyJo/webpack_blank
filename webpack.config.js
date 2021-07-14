@@ -12,12 +12,12 @@ const ENV = process.env;
 
 const isWatchMode = ENV.WATCH === 'true';
 
-const getEntries = (pattern, extension) => glob
+const getEntries = (pattern, extension, renameFile) => glob
     .sync(pattern)
     .reduce((entries, filename) => {
         const file = filename.split('/').pop();
         const [name] = file.match(/([a-z-A-Z-0-9]+)(?=\.[a-z]+)/g);
-        const entryName = `${extension}/${name}`;
+        const entryName = `${extension}/${renameFile || name}`;
         return {...entries, [entryName]: filename};
     }, {});
 
@@ -32,7 +32,8 @@ module.exports = {
     watch: isWatchMode,
     entry: {
         ...getEntries(`${PATHS.src_js}/script.js`, 'js'),
-        ...getEntries(`${PATHS.src_css}/*.scss`, 'css')
+        ...getEntries(`${PATHS.src_css}/index.scss`, 'css', 'main'),
+        ...getEntries(`${PATHS.src_css}/reset.scss`, 'css')
     },
     output: {
         path: path.resolve(__dirname, 'public')

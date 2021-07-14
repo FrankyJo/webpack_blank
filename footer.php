@@ -218,6 +218,86 @@
 
 <?php include 'opt-out-popup.php'; ?>
 
+<?php if (basename($_SERVER['SCRIPT_NAME']) == 'your-privacy-rights.php') { ?>
+    <script>
+        // open box links
+        const listLinks = [
+            '<a target="_blank" href="https://www.1plus1loans.co.uk/privacy-policy/">1plus1 Loans Limited</a>',
+            '<a target="_blank" href="https://www.247moneybox.com/247Moneybox-PP-full.htm">Active Securities Limited</a>',
+            '<a target="_blank" href="http://www.affiliateroi.net/AROI_privacy.htm">Affiliate ROI LLC</a>',
+            '<a target="_blank" href="https://www.talkloans.co.uk/privacy-policy/">Butler Westbury Limited</a>',
+            '<a target="_blank" href="https://www.choosewisely.co.uk/pages/privacy">Choose Wisely Limited</a>',
+            '<a target="_blank" href="https://www.clickfinancial.co.uk/privacy-notice">Click Loans Limited</a>',
+            '<a target="_blank" href="https://www.creditstar.co.uk/site/help/documents#privacy">Creditstar UK Limited</a>',
+            '<a target="_blank" href="http://dataondemand.co.uk/privacy-policy/">Data OD LTD</a>',
+            '<a target="_blank" href="https://www.piggy-bank.co.uk/privacy/">DJS UK Limited</a>',
+            '<a target="_blank" href="https://www.moneyboat.co.uk/privacy-policy/">Evergreen Finance London Ltd</a>',
+            '<a target="_blank" href="https://www.ferratum.co.uk/sites/ferratum.co.uk/files/20180509_uk_principles_of_processing_personal_data_of_clients_-_copy.pdf">Ferratum UK Ltd</a>',
+            '<a target="_blank" href="https://www.safetynetcredit.com/content/html/privacy-policy.html">Indigo Michael Limited</a>',
+            '<a target="_blank" href="http://www.interlincx.com/privacy-policy/">Interlincx</a>',
+            '<a target="_blank" href="https://www.leadbyte.co.uk/privacy/">Lead Byte LTD</a>',
+            '<a target="_blank" href="https://www.lendingstream.co.uk/legal/privacy-policy/">Lending Stream LLC</a>',
+            '<a target="_blank" href="http://www.leadaffinity.com/privacy-policy.html">Loan Machine Limited</a>',
+            '<a target="_blank" href="https://loans2go.co.uk/privacy-policy/">Loans 2 Go Ltd</a>',
+            '<a target="_blank" href="https://www.guarantormyloan.co.uk/privacy/">Match the Cash Limited</a>',
+            '<a target="_blank" href="https://www.mediablanket.co.uk/privacy-policy/">Mediablanket Ltd</a>',
+            '<a target="_blank" href="https://www.swiftsterling.co.uk/Information/PrivacyPolicy">MMP Financial Ltd</a>',
+            '<a target="_blank" href="https://www.monetise.co.uk/privacy-notice/">Monetise Media Limited</a>',
+            '<a target="_blank" href="https://privacy.monevo.com/uk/privacy-policy">Monevo Limited</a>',
+            '<a target="_blank" href="https://www.myfinanceclub.com/your-privacy/">My Finance Club Limited</a>',
+            '<a target="_blank" href="https://www.myjar.com/privacy-policy/">MYJAR IT OU</a>',
+            'Mylenders.co.uk',
+            '<a target="_blank" href="https://www.bizzyloans.co.uk/app-pages/privacypolicy">Nouveau Finance Ltd</a>',
+            '<a target="_blank" href="https://www.mrlender.com/privacy-policy">PDL Finance Limited</a>',
+            'Quest 365',
+            '<a target="_blank" href="https://www.happydosh.co.uk/privacy-policy/">Sandhurst Associates LTD</a>',
+            '<a target="_blank" href="http://terms1.co.uk/privacy-policy.php">Season Marketing Ltd</a>',
+            '<a target="_blank" href="https://www.unsecuredloans4u.co.uk/privacy-policy/">Serpable Ltd</a>',
+            '<a target="_blank" href="https://www.dotdotloans.co.uk/privacy-notice">Shelby Finance Ltd</a>',
+            '<a target="_blank" href="https://www.quidmarketloans.com/privacypolicy/">Stagemount Limited</a>',
+            '<a target="_blank" href="https://www.stopgonetworks.co.uk/privacy-policy/">Stop Go Networks Ltd</a>',
+            '<a target="_blank" href="https://www.bestloans.co.uk/privacy.php">TFLI Limited</a>',
+            '<a target="_blank" href="https://www.loanfirst.co.uk/privacy.php">Total Processing Ltd</a>',
+            '<a target="_blank" href="https://www.savvy.co.uk/Privacy/">Valour Finance Limited</a>',
+            '<a target="_blank" href="https://www.brighthouse.co.uk/privacy-notice ">Caversham Finance Ltd t/a Brighthouse</a>',
+            '<a target="_blank" href="https://claimdisrepair.co.uk/privacy/">Savvy Claims Limited</a>',
+            '<a target="_blank" href="https://themoneyplatform.com/privacy">Gracombex Ltd</a>',
+            '<a target="_blank" href="https://fernovo.co.uk/info/privacy-policy">Quidi Limited</a>',
+            '<a target="_blank" href="https://www.ukcredit.co.uk/privacy-policy/">UK Credit Limited</a>',
+            '<a target="_blank" href="https://www.satsumaloans.co.uk/privacy">Provident Personal Credit Limited</a>',
+            '<a target="_blank" href="https://www.loantube.com/privacy-policy/">Tiger Lion Financial Limited</a>',
+            '<p>Fund Ourselves Ltd, Warwick Financial Services Ltd, Dunham Technology Ltd, Bridgehouse Finance Ltd, Leadfix Ltd, Be All Ears Ltd, Saas Management Ltd, Paloma Digital Ltd, Quidie Ltd</p>',
+            '<a target="_blank" href="https://www.megamobiledeals.com/privacy-policy/ ">Duke Leads</a>',
+            '<a target="_blank" href="https://www.cash4unow.co.uk/privacy-policy ">Novaloans Ltd</a>',
+            '<a target="_blank" href="https://www.dotdotloans.co.uk/privacy-notice">Shelby CPF</a>',
+            '<a target="_blank" href="https://www.creditspring.co.uk/cookies-privacy-policy">Credit Spring</a>',
+            '<a target="_blank" href="https://fernovo.co.uk/info/privacy-policy">Fernovo - CPF Campaign</a>',
+            '<a target="_blank" href="https://www.mrlender.com/privacy-policy">Mr Lender - CPF Campaign</a>',
+            '<a target="_blank" href="https://walletwhale.co.uk/privacy.php">Fuel Ltd</a>',
+            '<a target="_blank" href="https://fernovo.co.uk/info/privacy-policy">Fernovo PCW</a>',
+            '<a target="_blank" href="https://smart-loans.co.uk/privacy-policy">ESL Consultancy Services Ltd</a>',
+            '<a target="_blank" href="https://www.quidmarketloans.com/privacy-policy/">Quidmarket_PCW</a>',
+            '<a target="_blank" href="https://fernovo.co.uk/info/privacy-policy">Fernovo</a>',
+            '<a target="_blank" href="https://loans2go.co.uk/privacy-policy/">DigitalOyster t/a Loans2Go</a>',
+            '<a target="_blank" href="https://www.myfinanceclub.com/your-privacy/">MyFinance Club</a>',
+            '<a target="_blank" href="https://www.cashfloat.co.uk/legal/gdpr-privacy-notice/">Western Circle Ltd</a>',
+            '<a target="_blank" href="https://www.safetynet.credit/privacy-policy">SafetyNet_PCW</a>',
+            '<a target="_blank" href="https://themoneyplatform.com/privacy">The Money Platform</a>',
+            '<a target="_blank" href="http://www.leadaffinity.com/iframe-policy.html">Lead Affinity</a>',
+            '<a target="_blank" href="https://www.quidmarketloans.com/privacy-policy/">QuidMarket</a>',
+            '<a target="_blank" href="https://www.savvy.co.uk/Privacy/">Valour Finance_CPA</a>',
+            '<a target="_blank" href="https://www.talkloans.co.uk/privacy-policy/">Talk Loans</a>',
+            '<a target="_blank" href="https://www.everythingfinancial.co.uk/privacypolicy">Everything Financial Ltd</a>',
+            '<a target="_blank" href="https://www.bizzyloans.co.uk/app-pages/privacypolicy">PingYo</a>',
+        ]
+
+        $('.get-links').on('click', function () {
+            var newWindow = window.open("", null, "height=200,width=400,status=yes,toolbar=no,menubar=no,location=no");
+            newWindow.document.body.innerHTML = listLinks;
+        });
+    </script>
+<?php } ?>
+
 </body>
 
 </html>

@@ -1,0 +1,76 @@
+/* ===============================================
+================== CONTACT PAGE ==================
+================================================== */
+
+/* contact form */
+
+.box-contact-form {
+  width: 100%;
+  background: #5E53BD;
+  border: 1px solid #5E53BD;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 30px 60px;
+  color: #fff;
+  .feed_contact {
+    text-align: center;
+    .field {
+      label {
+        display: none;
+        position: absolute;
+        top: 3px;
+        left: 20px;
+        font-size: 14px;
+        color: #F41E00;
+      }
+      &.error+label {
+        display: block;
+      }
+      .error {
+        border-color: #F41E00;
+      }
+    }
+  }
+  .req-text {
+    color: #fff;
+    text-align: left;
+    margin: 30px 0 0;
+  }
+  // Стиль окна после отправки формы
+  .disc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    padding: 200px 0;
+    @media screen and (max-width: 600px) {
+      padding: 60px 0 20px;
+    }
+    .img {
+      width: 105px;
+      height: 105px;
+      background: #fff;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h3 {
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 124%;
+      color: #fff;
+      max-width: 360px;
+      margin: 25px auto;
+      @media screen and (max-width: 600px) {
+        font-size: 36px;
+      }
+    }
+    p {
+      font-size: 18px;
+      line-height: 27px;
+      color: #fff;
+    }
+  }
+}

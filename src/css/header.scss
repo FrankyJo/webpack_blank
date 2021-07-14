@@ -1,0 +1,203 @@
+/* ------------- header section ------------- */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 995;
+  .top-info {
+    background: #000;
+    color: #fff;
+    font-size: 13px;
+    padding: 10px 0;
+    @media screen and (max-width: 750px) {
+      font-size: 12px;
+      padding: 8px 0;
+    }
+    @media screen and (max-width: 650px) {
+      font-size: 10px;
+      padding: 5px 0;
+    }
+    span {
+      font-weight: 700;
+    }
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media screen and (max-width: 950px) {
+        text-align: center;
+      }
+      @media screen and (max-width: 600px) {
+        display: block;
+      }
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .top-nav {
+    position: relative;
+    padding: 40px 0;
+    transition: 0.2s;
+    @media screen and (max-width: 950px) {
+      padding: 30px 0;
+    }
+    @media screen and (max-width: 750px) {
+      padding: 16px 0;
+    }
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .hidden-desktop {
+      display: none;
+      @media screen and (max-width: 950px) {
+        display: block;
+      }
+    }
+  }
+  .menu {
+    @media screen and (min-width: 951px) {
+      display: block!important;
+    }
+    @media screen and (max-width: 950px) {
+      display: none;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 55px;
+      left: 0;
+      background: #fff;
+      padding: 0 50px;
+      z-index: 1000;
+      overflow-y: auto;
+      text-align: center;
+      .close {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+      }
+    }
+
+    @media screen and (max-width: 750px) {
+      top: 54px;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 0 20px;
+    }
+    li {
+      display: inline-block;
+      margin: 0 35px 0 0;
+      @media screen and (max-width: 950px) {
+        display: block;
+        margin: 0 0 20px;
+        margin-left: 0;
+        &:last-child {
+          display: none;
+        }
+      }
+      a {
+        color: #000;
+        position: relative;
+        @media screen and (max-width: 950px) {
+          color: #000;
+        }
+        &:after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 4px;
+          background: #FF7966;
+          position: relative;
+          top: 10px;
+          transition: 0.4s;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+        &.get-btn {
+          background: transparent;
+          color: #fff;
+          background: #3A318A;
+          border-radius: 4px;
+          font-size: 13px;
+          font-weight: 700;
+          line-height: 16px;
+          text-transform: uppercase;
+          padding: 10px 30px;
+          @media screen and (max-width: 950px) {
+            color: #fff;
+            background: #3A318A;
+            border-radius: 10px;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+          }
+          &:hover {
+            background: #FF7966;
+          }
+          &:after {
+            display: none;
+            @media screen and (max-width: 950px) {
+              top: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .hum {
+    width: 40px;
+    height: 20px;
+    background: transparent;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column nowrap;
+    cursor: pointer;
+    @media screen and (max-width: 950px) {
+      display: flex;
+    }
+    span {
+      width: 100%;
+      height: 3px;
+      background: #3A318A;
+      transition: 0.4s;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    &:hover span {
+      background: #FF7966;
+    }
+    &.in span {
+      &:nth-child(2) {
+        width: 0;
+      }
+      &:first-child,
+      &:last-child {
+        width: 26px;
+        background: #3A318A;
+      }
+      &:first-child {
+        transform: rotate(45deg);
+        top: 9px;
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+        top: -8px;
+      }
+    }
+  }
+}

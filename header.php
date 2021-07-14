@@ -26,8 +26,8 @@
     <!-- / -->
 
     <script src="lib/jquery.min.v3.5.1.js"></script>
-    <script src="https://cdn101.t.uk/resource/global/js/params_store.js"></script>
     <script src="lib/validate.js"></script>
+    <script src="https://cdn101.t.uk/resource/global/js/params_store.js"></script>
 
     <script src="public/js/script.js?v=1.0"></script>
 </head>
