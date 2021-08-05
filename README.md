@@ -2,6 +2,8 @@ need fix problem with runtime ( js crash if use async await ) https://stackoverf
 https://www.npmjs.com/package/sort-css-media-queries - добавить сортировку медиазапросов <br>|
 убрать со зборщика медиазапрос  @media screen and (min-width: 2000px)
 изменить контент на странице terms and conditions ( можно взять с нового фида quidcenter)
+выплевывать файлы со стиля и скриптами сразу в корень
+
 <h2>Использование</h2>
 <p>Для использования данной шаблона, необходимо скачать его и установить все нужные пакеты. Для сборки файлов используйте только команду <code>npm run watch</code>, т.к. она не минимизирует файлы</p>
 <h2> Моменты на которые стоит обратить внимание при выливке </h2>
